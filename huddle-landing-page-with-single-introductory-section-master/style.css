@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+/* font-family: 'Open Sans', sans-serif; 
+400 
+
+font-family: 'Poppins', sans-serif; 
+400, 600 */
+
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/images/bg-mobile.svg);
+    background-color: var(--Violet);
+    background-repeat: no-repeat;
+    
+    
+   
+    
+    @media screen and (min-width: 900px) {
+        background-image: url(/images/bg-desktop.svg);
+        background-size: cover;
+    }
+}
+
+
+header img {
+    height: 40px;
+}
+
+main {
+    padding: 1.5rem 2.1rem;
+
+    @media screen and (min-width: 540px) {
+        max-width: 540px;
+        margin: 0 auto;
+    }
+}
+
+
+section:first-child img {
+    max-height: 320px;
+    width: 100%;
+    margin-top: 3.3rem;
+}
+
+section:nth-child(2) {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 4rem;
+}
+
+section:nth-child(2) h2 {
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    margin-bottom: 1.1rem;
+    font-weight: 600;
+}
+
+section:nth-child(2) p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.1rem;
+    font-weight: 400;
+}
+
+section:nth-child(2) button {
+    background-color: white;
+    width: 14rem;
+    height: 2.8rem;
+    border-radius: 2rem;
+    color: var(--Violet);
+    border: none;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.171);
+    margin-top: 0.5rem;
+}
+
+section:nth-child(2) button:hover {
+    background-color: var(--Soft-Magenta);
+    color: white;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+
+section:last-child img {
+    height: 35px;
+}
+
+
+@media screen and (min-width: 900px) {
+    main {
+        max-width: inherit;
+        width: clamp(40%, 1400px, 95%);
+        height: 98vh;
+        padding: 3.2rem;
+    }
+
+    .main-content_container {
+        display: flex;
+   
+        align-items: center;
+        width: 100%;
+        height: 92%;
+        gap: 2rem;
+    }
+
+    section:first-child {
+        width: 60%;
+        
+    }
+
+    section:first-child img {
+        height: 32rem;
+        max-height: inherit;
+       
+    }
+
+    section:nth-child(2) {
+        width: 40%;
+        text-align: left;
+        margin-top: -6rem;
+    }
+
+    section:nth-child(2) h2 {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+
+    .social-media {
+        justify-content: right;
+        margin-top: inherit;
+    }
+
+    section:nth-child(2) button {
+        height: 3.5rem;
+        width: 12rem;
+        font-size: 1.1rem;
+    }
+}
+
+
+.attribution { 
+    font-size: 11px; text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
